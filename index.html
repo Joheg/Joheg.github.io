@@ -1,107 +1,241 @@
 <!DOCTYPE html>
+
 <html lang="de">
 <head>
     <meta charset="UTF-8">
 
-    <title>Unser Verein</title>
+```
+<title>Unser Verein</title>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 30px 20px;
-            line-height: 1.6;
-            background: #f5f5f5;
-            color: #222;
-        }
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 30px 20px;
+        line-height: 1.6;
+        background: #f5f5f5;
+        color: #222;
+    }
 
-        main {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-        }
+    main {
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+    }
 
-        h1 {
-            margin-top: 0;
-        }
+    h1 {
+        margin-top: 0;
+    }
 
-        h2 {
-            margin-top: 40px;
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 8px;
-        }
+    h2 {
+        margin-top: 40px;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 8px;
+    }
 
-        a {
-            color: #0645ad;
-        }
+    a {
+        color: #0645ad;
+    }
 
-        .noten a {
-            display: block;
-            margin: 10px 0;
-        }
+    .noten a {
+        display: block;
+        margin: 10px 0;
+    }
 
-        .video {
-            margin: 25px 0;
-        }
+    .video {
+        margin: 25px 0;
+    }
 
-        iframe {
-            width: 100%;
-            max-width: 700px;
-            aspect-ratio: 16 / 9;
-            border: 0;
-        }
-    </style>
+    iframe {
+        width: 100%;
+        max-width: 700px;
+        aspect-ratio: 16 / 9;
+        border: 0;
+    }
+
+    .formular {
+        margin-top: 25px;
+    }
+
+    .formular label {
+        display: block;
+        margin-top: 15px;
+        font-weight: bold;
+    }
+
+    .formular input[type="text"],
+    .formular input[type="email"] {
+        width: 100%;
+        max-width: 500px;
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+        font-size: 16px;
+    }
+
+    .radio-gruppe {
+        margin-top: 10px;
+    }
+
+    .radio-option {
+        margin: 8px 0;
+        font-weight: normal !important;
+    }
+
+    .radio-option input {
+        margin-right: 8px;
+    }
+
+    .formular button {
+        margin-top: 25px;
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        background: #0645ad;
+        color: white;
+    }
+
+    .formular button:hover {
+        background: #043580;
+    }
+</style>
+```
+
 </head>
 
 <body>
 
 <main>
 
-    <h1>Willkommen</h1>
+```
+<h1>Willkommen</h1>
 
-    <p>
-        Willkommen auf der Webseite unseres Vereins!
-    </p>
+<p>
+    Willkommen auf der Webseite unseres Vereins!
+</p>
 
-    <p>
-        Hier findest du unsere Noten und Lernvideos.
-    </p>
-
-
-    <h2>TMSpf Marsch (Arbeitstitel)</h2>
-
-    <div class="noten">
-
-        <a href="noten/Kurt Gänsli Marsch.pdf" target="_blank">
-            📄 Partition
-        </a>
-
-        <a href="noten/Kurt Gänsli Marsch (Trommel).pdf" target="_blank">
-            📄 Trommel
-        </a>
-
-        <a href="noten/Kurt Gänsli Marsch (Gr. Trommel).pdf" target="_blank">
-            📄 Grosse Trommel
-        </a>
-
-    </div>
+<p>
+    Hier findest du unsere Noten und Lernvideos.
+</p>
 
 
-    <h2>Lernvideos (coming soon ...)</h2>
+<h2>TMSpf Marsch (Arbeitstitel)</h2>
 
-    <div class="video">
+<div class="noten">
 
-        <iframe
-            src="https://www.youtube.com/embed/VIDEO-ID"
-            title="Vers 1"
-            allowfullscreen>
-        </iframe>
+    <a href="noten/Kurt Gänsli Marsch.pdf" target="_blank">
+        📄 Partition
+    </a>
 
-    </div>
+    <a href="noten/Kurt Gänsli Marsch (Trommel).pdf" target="_blank">
+        📄 Trommel
+    </a>
 
+    <a href="noten/Kurt Gänsli Marsch (Gr. Trommel).pdf" target="_blank">
+        📄 Grosse Trommel
+    </a>
+
+</div>
+
+
+<h2>Lernvideos (coming soon ...)</h2>
+
+<div class="video">
+
+    <iframe
+        src="https://www.youtube.com/embed/VIDEO-ID"
+        title="Vers 1"
+        allowfullscreen>
+    </iframe>
+
+</div>
+
+
+<h2>Anmeldung</h2>
+
+<form class="formular" id="anmeldeformular">
+
+```
+<label for="vorname">Vorname</label>
+<input type="text" id="vorname" name="vorname" required>
+
+<label for="name">Name</label>
+<input type="text" id="name" name="name" required>
+
+<label for="email">E-Mail-Adresse</label>
+<input type="email" id="email" name="email" required>
+
+<label for="instrument">Instrument</label>
+<input type="text" id="instrument" name="instrument" required>
+
+<label>Instrument vorhanden?</label>
+
+<div class="radio-gruppe">
+
+    <label class="radio-option">
+        <input
+            type="radio"
+            name="instrument_vorhanden"
+            value="eigenes_oder_organisierbar"
+            required>
+        Ich habe ein eigenes Instrument oder kann eines für mich organisieren
+    </label>
+
+    <label class="radio-option">
+        <input
+            type="radio"
+            name="instrument_vorhanden"
+            value="kein_instrument">
+        Ich habe kein eigenes Instrument und kann auch keines organisieren
+    </label>
+
+</div>
+
+<button type="submit">Anmelden</button>
+
+<p id="formular-status"></p>
+```
+
+</form>
+
+<script>
+const formular = document.getElementById("anmeldeformular");
+const status = document.getElementById("formular-status");
+
+formular.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const daten = {
+        vorname: document.getElementById("vorname").value,
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        instrument: document.getElementById("instrument").value,
+        instrument_vorhanden: document.querySelector(
+            'input[name="instrument_vorhanden"]:checked'
+        ).value
+    };
+
+    fetch("https://script.google.com/macros/s/AKfycbx2MJY6T7DIbPHVY9Bhxv60WY7g0ItumU0Swp0guyszWPCZG2GQIMi5yX5fdosnY4KXqQ/exec", {
+        method: "POST",
+        mode: "no-cors",
+        headers: {
+            "Content-Type": "text/plain;charset=utf-8"
+        },
+        body: JSON.stringify(daten)
+    });
+
+    status.textContent = "Danke für deine Anmeldung!";
+    formular.reset();
+});
+</script>
+```
 
 </main>
 
