@@ -128,7 +128,7 @@
 <div class="noten">
 
     <a href="Kurt Gaensli Marsch.pdf" target="_blank">
-        📄 Partition
+        📄 Partitur
     </a>
 
     <a href="Kurt Gaensli Marsch (Trommel).pdf" target="_blank">
@@ -165,11 +165,18 @@
 <label for="name">Name*</label>
 <input type="text" id="name" name="name" required>
 
-<label for="email">E-Mail-Adresse*</label>
-<input type="email" id="email" name="email" required>
+<label for="email">E-Mail-Adresse*</label> <input type="email" id="email" name="email" required>
 
-<label for="instrument">Instrument*</label>
-<input type="text" id="instrument" name="instrument" required>
+<label for="promotion">Promotion*</label> <input
+ type="number"
+ id="promotion"
+ name="promotion"
+ min="1900"
+ max="2100"
+ required>
+
+<label for="instrument">Instrument*</label> <input type="text" id="instrument" name="instrument" required>
+
 
 <label>Instrument vorhanden?*</label>
 
@@ -194,6 +201,15 @@
     </label>
 
 </div>
+
+<label for="bemerkung">Bemerkung</label>
+
+<textarea
+    id="bemerkung"
+    name="bemerkung"
+    rows="6"
+    maxlength="1000"
+    placeholder="Hier kannst du uns noch etwas mitteilen..."></textarea>
 
 <button type="submit" id="anmelden-button">Anmelden</button>
 
