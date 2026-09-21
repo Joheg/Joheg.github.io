@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
 
-```
 <title>Unser Verein</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -106,7 +105,6 @@
         background: #043580;
     }
 </style>
-```
 
 </head>
 
@@ -114,7 +112,6 @@
 
 <main>
 
-```
 <h1>Willkommen</h1>
 
 <p>
@@ -162,7 +159,6 @@
 
 <form class="formular" id="anmeldeformular">
 
-```
 <label for="vorname">Vorname</label>
 <input type="text" id="vorname" name="vorname" required>
 
@@ -192,7 +188,8 @@
         <input
             type="radio"
             name="instrument_vorhanden"
-            value="kein_instrument">
+            value="kein_instrument"
+            required>
         Ich habe kein eigenes Instrument und kann auch keines organisieren
     </label>
 
@@ -200,14 +197,28 @@
 
 <button type="submit">Anmelden</button>
 
-<p id="formular-status"></p>
-```
-
 </form>
+
+<div id="formular-erfolg" style="display: none; margin-top: 25px;">
+    <h3>Anmeldung erfolgreich! 🎉</h3>
+    <p>
+        Vielen Dank für deine Anmeldung.
+        Deine Angaben wurden erfolgreich übermittelt.
+    </p>
+</div>
+
+<div id="formular-fehler" style="display: none; margin-top: 25px;">
+    <h3>Leider ist etwas schiefgelaufen.</h3>
+    <p>
+        Deine Anmeldung konnte nicht übermittelt werden.
+        Bitte versuche es nochmals.
+    </p>
+</div>
 
 <script>
 const formular = document.getElementById("anmeldeformular");
-const status = document.getElementById("formular-status");
+const erfolg = document.getElementById("formular-erfolg");
+const fehler = document.getElementById("formular-fehler");
 
 formular.addEventListener("submit", function(event) {
     event.preventDefault();
@@ -229,13 +240,16 @@ formular.addEventListener("submit", function(event) {
             "Content-Type": "text/plain;charset=utf-8"
         },
         body: JSON.stringify(daten)
+    })
+    .then(function() {
+        formular.style.display = "none";
+        erfolg.style.display = "block";
+    })
+    .catch(function() {
+        fehler.style.display = "block";
     });
-
-    status.textContent = "Danke für deine Anmeldung!";
-    formular.reset();
 });
 </script>
-```
 
 </main>
 
