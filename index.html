@@ -266,9 +266,11 @@ formular.addEventListener("submit", function(event) {
         name: document.getElementById("name").value,
         email: document.getElementById("email").value,
         instrument: document.getElementById("instrument").value,
+        promotion: document.getElementById("promotion").value,
         instrument_vorhanden: document.querySelector(
             'input[name="instrument_vorhanden"]:checked'
-        ).value
+        ).value,
+        bemerkung: document.getElementById("bemerkung").value
     };
 
     fetch("https://script.google.com/macros/s/AKfycbx2MJY6T7DIbPHVY9Bhxv60WY7g0ItumU0Swp0guyszWPCZG2GQIMi5yX5fdosnY4KXqQ/exec", {
